@@ -1,0 +1,127 @@
+/* admin/css/admin.css */
+
+/* Reset y fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #101010 !important; /* muy oscuro */
+  color: #eee !important;
+}
+
+/* Cabecera */
+#header {
+  background-color: #7b5dc7 !important; /* morado vivo */
+  color: #fff !important;
+  font-weight: 700;
+  box-shadow: none;
+  border-bottom: 1px solid #5c48a5;
+}
+
+/* Sidebar / módulos */
+.module {
+  background-color: transparent !important;
+  padding: 10px 0;
+  border: none;
+  color: #b8a7db !important; /* morado suave */
+  font-weight: 600;
+}
+
+/* Botones (guardar, agregar, etc.) */
+button,
+input[type=submit],
+input[type=button],
+input[type=reset] {
+  background-color: #7b5dc7 !important;
+  color: #fff !important;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #7b5dc7;
+  cursor: pointer;
+}
+
+button:hover,
+input[type=submit]:hover {
+  background-color: #9678d1 !important;
+  box-shadow: 0 0 12px #9678d1;
+}
+
+/* Labels */
+label {
+  color: #b8a7db !important;
+  font-weight: 600;
+}
+
+/* Inputs y selects */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+  border: 1px solid #9678d1;
+  padding: 8px 10px;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #1b1536; /* fondo oscuro */
+  color: #e0d9f7;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #d8c9f2;
+  outline: none;
+  box-shadow: 0 0 8px #d8c9f2;
+}
+
+/* Tabla del listado */
+#changelist table {
+  border: 1px solid #9678d1;
+  background-color: transparent;
+  color: #d8c9f2;
+}
+
+#changelist table th {
+  background-color: #7b5dc7;
+  color: #e0d9f7;
+  font-weight: 600;
+  border-bottom: 1px solid #5c48a5;
+}
+
+#changelist table td {
+  background-color: #121021;
+  color: #d8c9f2;
+  border-bottom: 1px solid #5c48a5;
+}
+
+/* Mensajes del sistema (éxito, error) */
+.messagelist .success {
+  background-color: #b9a4f7;
+  color: #121021;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: none;
+}
+
+/* Fondo de los fieldsets */
+fieldset {
+  border: 2px solid #7b5dc7;
+  padding: 12px 20px;
+  background-color: #121021; /* fondo muy oscuro con matiz frío */
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+/* Título de los módulos */
+.module h2 {
+  color: #d8c9f2;
+  font-weight: bold;
+}

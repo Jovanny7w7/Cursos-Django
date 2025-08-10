@@ -1,0 +1,20 @@
+{% extends "inicio/encabezado.html" %}
+{% load static %}
+{% block titulo %}Eliminar Curso{% endblock %}
+
+{% block contenido %}
+<section class="eliminar-curso">
+  <div class="card-eliminar">
+    <h2 class="titulo">🗑️ Eliminar Curso</h2>
+    <p class="mensaje">¿Estás seguro de que deseas eliminar el curso <strong>"{{ curso.nombre }}"</strong>?</p>
+
+    <form method="post" class="formulario-eliminar">
+      {% csrf_token %}
+      <div class="botones">
+        <button type="submit" class="btn-eliminar">Sí, eliminar</button>
+        <a href="{% url 'cursos' %}" class="btn-cancelar">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

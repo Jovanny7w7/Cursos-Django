@@ -1,0 +1,16 @@
+{% extends "inicio/encabezado.html" %}
+{% load static %}
+{% block titulo %} Principal {% endblock %}
+
+{% block contenido %}
+<section class="pagina-principal">
+  <div class="contenedor-principal">
+    <h1 class="titulo">📚 Cursos</h1>
+    <p class="descripcion">Los mejores cursos de todo el oeste. Aprende, mejora y destaca.</p>
+
+    <a href="{% url 'crear_curso' %}" class="btn-crear">
+      + Crear Curso
+    </a>
+  </div>
+</section>
+{% endblock %}

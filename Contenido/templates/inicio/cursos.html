@@ -1,0 +1,36 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} Cursos {% endblock %}
+
+{% block contenido %}
+<section class="seccion-cursos">
+  <h2 class="titulo-cursos">Nuestros Cursos</h2>
+  <div class="contenedor-cursos">
+    {% for curso in cursos %}
+      <div class="tarjeta-curso">
+        <div class="tarjeta-contenido">
+          <h3>{{ curso.nombre }}</h3>
+          <p class="descripcion">{{ curso.descripcion }}</p>
+          <ul class="detalle-curso">
+            <li><strong>Instructor:</strong> {{ curso.instructor }}</li>
+            <li><strong>Duración:</strong> {{ curso.duracion_horas }} horas</li>
+            <li><strong>Precio:</strong> ${{ curso.precio }}</li>
+            <li><strong>Cupo máximo:</strong> {{ curso.cupo_maximo }}</li>
+          </ul>
+          {% if curso.imagen %}
+            <div class="imagen-curso">
+              <img src="{{ curso.imagen.url }}" alt="{{ curso.nombre }}">
+            </div>
+          {% endif %}
+          <div class="acciones-curso">
+            <a href="{% url 'editar_curso' curso.id %}" class="boton editar">✏️ Editar</a>
+            <a href="{% url 'eliminar_curso' curso.id %}" class="boton eliminar" onclick="return confirm('¿Seguro que deseas eliminar este curso?');">🗑️ Eliminar</a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="mensaje-vacio">No hay cursos disponibles.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
