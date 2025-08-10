@@ -1,0 +1,553 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #101010;
+    color: #eee;
+}
+
+/* Sidebar */
+.sidebar-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #1a1a1a;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    z-index: 100;
+}
+
+/* Logo en la parte superior del sidebar */
+.sidebar-logo {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.sidebar-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #03dac6;
+    object-fit: cover;
+}
+
+/* Enlaces alineados a la izquierda */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.menu-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+.menu-links a:hover {
+    background-color: #222;
+    color: #03dac6;
+    border-left: 4px solid #03dac6;
+}
+
+/* Botón Contacto con estilo especial */
+.menu-links .contacto-link {
+    background-color: #bb86fc;
+    color: #121212;
+    border-radius: 6px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.menu-links .contacto-link:hover {
+    background-color: #9a67ea;
+    color: #fff;
+}
+
+/* Contenido desplazado para no quedar debajo del sidebar */
+.main-content {
+    margin-left: 220px;
+    padding: 2rem;
+}
+
+/* Opciones centradas con espaciado y efecto hover */
+.opciones {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opciones li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.opciones li a:hover {
+  background-color: #03dac6;
+  color: #121212;
+}
+
+/* Botón destacado con colores vibrantes */
+.opciones .btn a {
+  background-color: #bb86fc;
+  color: #121212;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opciones .btn a:hover {
+  background-color: #9a67ea;
+  box-shadow: 0 6px 20px rgba(154, 103, 234, 0.8);
+}
+
+/* Sección cursos con fondo oscuro y texto claro */
+.cursos {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #e0e0e0;
+  background: linear-gradient(135deg, #222222, #1a1a1a);
+}
+
+/* Cards con fondo negro semitransparente y sombras neón */
+.seccion-cursos {
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+  color: #e0e0e0;
+}
+
+.titulo-cursos {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #80cbc4;
+  letter-spacing: 1px;
+}
+
+.contenedor-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-curso {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-curso:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.tarjeta-contenido h3 {
+  font-size: 1.5rem;
+  color: #b2dfdb;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.detalle-curso {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+}
+.detalle-curso li {
+  margin-bottom: 0.3rem;
+}
+
+.imagen-curso img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #444;
+}
+
+.acciones-curso {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.boton {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.boton.editar {
+  background-color: #03dac6;
+  color: #121212;
+}
+.boton.editar:hover {
+  background-color: #00c4b4;
+}
+
+.boton.eliminar {
+  background-color: #ef5350;
+  color: #fff;
+}
+.boton.eliminar:hover {
+  background-color: #d32f2f;
+}
+
+.mensaje-vacio {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  padding: 2rem 0;
+}
+
+
+
+
+/* Contacto centrado con fondo oscuro */
+.contacto {
+  padding: 3rem 1rem;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bb86fc;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Estilos para formulario */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ccc;
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2b2b2b;
+  color: #ddd;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: inset 0 0 8px #00000099;
+  transition: background-color 0.3s ease;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background-color: #3a3a3a;
+  outline: none;
+  box-shadow: 0 0 12px #bb86fc;
+}
+
+button[type="submit"],
+.submit-btn {
+  display: block;
+  width: 100%;
+  background-color: #bb86fc;
+  color: #121212;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(187, 134, 252, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+button[type="submit"]:hover,
+.submit-btn:hover {
+  background-color: #9a67ea;
+  box-shadow: 0 8px 25px rgba(154, 103, 234, 0.9);
+}
+
+.editar-curso {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario-edicion {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.formulario-edicion h2 {
+  text-align: center;
+  color: #80cbc4;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.campos-form p {
+  margin-bottom: 1.2rem;
+  color: #ccc;
+}
+
+.campos-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.campos-form input,
+.campos-form textarea,
+.campos-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #eee;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.campos-form input:focus,
+.campos-form textarea:focus,
+.campos-form select:focus {
+  border-color: #03dac6;
+  outline: none;
+  box-shadow: 0 0 10px rgba(3, 218, 198, 0.3);
+}
+
+.boton-guardar {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #03dac6;
+  border: none;
+  color: #121212;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-guardar:hover {
+  background-color: #00bfa5;
+}
+
+.crear-curso {
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.formulario-crear {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.formulario-crear h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #64ffda;
+  font-size: 2rem;
+}
+
+.grupo-campo {
+  margin-bottom: 1.5rem;
+}
+
+.grupo-doble {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.grupo-doble .grupo-campo {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #202020;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #64ffda;
+  outline: none;
+  box-shadow: 0 0 6px rgba(100, 255, 218, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.boton-crear {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #64ffda;
+  color: #121212;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-crear:hover {
+  background-color: #1de9b6;
+  transform: translateY(-2px);
+}
+
+.eliminar-curso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.card-eliminar {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-eliminar .titulo {
+  font-size: 1.8rem;
+  color: #f87171;
+  margin-bottom: 1rem;
+}
+
+.card-eliminar .mensaje {
+  font-size: 1.1rem;
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+.formulario-eliminar .botones {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.btn-eliminar {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #b91c1c;
+}
+
+.btn-cancelar {
+  background-color: #374151;
+  color: #eee;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancelar:hover
+

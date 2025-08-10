@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block titulo %} Título por defecto {% endblock %}</title>
+    <link href="{% static 'inicio/css/styles.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <aside class="sidebar-nav">
+            <div class="sidebar-logo">
+                <img src="{% static 'inicio/img/logo.jpg' %}" alt="Logo">
+            </div>
+            <nav class="menu-links">
+                <a href="{% url 'Principal' %}">Principal</a>
+                <a href="{% url 'cursos' %}">Cursos</a>
+                <a href="{% url 'contacto' %}" class="contacto-link">Contacto</a>
+            </nav>
+        </aside>
+    </header>
+
+    <main class="main-content">
+        {% block contenido %}
+        {% endblock %}
+    </main>
+</body>
+</html>
